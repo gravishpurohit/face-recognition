@@ -48,8 +48,6 @@ class App extends Component{
   }
   
   loadUser=(data) => {
-    console.log('kush')
-    console.log(data)
    this.setState({user : {
     id:data.id,
     name:data.name,
@@ -59,10 +57,8 @@ class App extends Component{
    }})
   }
   calculateFaceLocation = (data) => {
-    console.log(data)
     const clarifaiFace=data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById('inputimage');
-    console.log(image.width);
     const width = Number(image.width);
     const height = Number(image.height);
     return{
@@ -74,7 +70,6 @@ class App extends Component{
   }
 
   displayFaceBox = (box) => {
-    console.log(box);
     this.setState({box: box});
   }
 

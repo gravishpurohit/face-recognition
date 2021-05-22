@@ -11,15 +11,12 @@ class Register extends React.Component{
 
   onNameChange = (event) => {
     this.setState({ name: event.target.value })
-    
   }
   onEmailChange = (event) => {
     this.setState({ email: event.target.value })
-    
   }
   onPasswordChange = (event) => {
     this.setState({ password: event.target.value })
-    
   }
   onSubmitSignIn = () => {
     fetch('https://limitless-ocean-00636.herokuapp.com/register' ,{

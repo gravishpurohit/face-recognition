@@ -9,11 +9,9 @@ class Signin extends React.Component {
   }
   onEmailChange = (event) => {
     this.setState({ signInEmail: event.target.value })
-    console.log(event.target.value);
   }
   onPasswordChange = (event) => {
     this.setState({ signInPassword: event.target.value })
-    console.log(event.target.value);
   }
   onSubmitSignIn = () => {
     fetch('https://limitless-ocean-00636.herokuapp.com/signin' ,{
